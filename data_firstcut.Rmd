@@ -1,0 +1,29 @@
+---
+title: "Stat 432 Data Descriptive Statistics"
+author: "Group: Score 100"
+date: "March 21, 2019"
+output: pdf_document
+toc: TRUE
+---
+
+#Input Data
+```{r}
+library(readr)
+data <- read.csv("online_news.csv")
+dim(data) #There're total 61 variables with 39,644 observations
+```
+
+#First 5 observations
+```{r}
+head(data)[1:5, ]
+```
+
+#Basic Statistics 
+```{r warning=FALSE}
+library(pastecs)
+options(scipen=100)
+options(digits=2)
+stat.desc(data, desc=F) #basic statistics
+```
+
+
